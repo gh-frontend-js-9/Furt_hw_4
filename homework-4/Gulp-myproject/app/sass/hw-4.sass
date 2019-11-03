@@ -1,0 +1,393 @@
+@import 'text'
+@import 'buttons'
+$montserrat-bold: Montserrat-Bold, sans-serif
+$lato-regular: Lato-Regular, ﻿sans-serif
+$montserrat-regular: ﻿Montserrat-Regular, ﻿sans-serif
+
+%main-wrapper 
+	margin: 0 auto
+	max-width: 1130px
+	width: 100%
+	position: relative
+
+.header__wrapper 
+	display: flex
+	flex-wrap: nowrap
+
+.logo 
+	float: left
+	margin: 22px 30px
+	&__img--pencil
+		padding-right: 10px
+
+.header__nav 
+	display: flex;
+	justify-content: flex-end
+	align-items: center
+	font-family: ﻿$montserrat-bold
+	font-size: 19px
+
+.menu
+	margin: 35px 20px;
+	list-style-type: none
+	display: inline-block
+	&__list 
+		flex-direction: row
+		display: flex
+		padding: 10px
+	&__a
+		text-decoration: none
+		color: rgba(99, 92, 115, 255)
+
+@media (max-width: 768px) 
+	.menu
+		display: none
+@media (max-width: 480px) 
+	.menu
+		display: none
+
+.main__button
+	margin: 20px 10px
+	padding: 7px 35px 7px 35px
+	border: none
+	border-radius: 28px
+	background-color: #8D81AC
+	font-family: ﻿$montserrat-bold
+	font-size: 19px
+	color: #ffffff
+	&:hover 
+		background-color:#4fa3c6
+
+/*.burger */
+.burger 
+	display: none
+	&__label 
+		display: none
+
+@media (max-width: 850px) 
+	.menu__list
+		display: none
+	.burger:checked ~ .menu__list 
+		display: flex
+		flex-direction: column
+	.burger__label 
+		display: block
+		right: 20px
+		position: absolute
+		top: 43px
+	.menu
+		flex-direction: column
+
+// .menu_list
+//  padding: 0px 15px  ???????
+.clear 
+	clear: both
+
+// forkApp_section 
+.padding__bottom 
+	padding-bottom: 540px
+.forkApp-section 
+	text-align: center
+	background: url(../img/BG.png) center center no-repeat 
+	background-size: cover
+
+.forkApp-section__wrapper
+	@extend %main-wrapper
+
+// revolutionary-section
+.revolutionary-section
+	font-family: ﻿$montserrat-regular
+	color: rgba(132, 142, 151, 255)
+	text-align: center
+.revolutionary-section__wrapper
+	@extend %main-wrapper
+	
+
+@media (max-width: 500px) 
+	.revolutionary-section__wrapper--title
+		padding: 0px
+		font-size: 40px
+	
+.hereIs-section
+	background-color: #f4f4f4
+.hereIs-section__wrapper
+	@extend %main-wrapper
+
+.hereIs-block__left
+		float: left
+		width: 45%
+@media (max-width: 900px) 
+	.hereIs-block__left
+		width: 95%
+		padding: 0px 10px
+
+.hereIs__block-creatred
+	padding-left: 130px
+	margin-top: 60px
+	background: url(../img/icon-1X.png) left center no-repeat
+.hereIs__block-incredibly
+	padding-left: 130px
+	padding-left: 130px;
+	background: url(../img/icon2X.png) left center no-repeat;
+.hereIs__block-experimental
+	padding-left: 130px
+	padding-left: 130px;
+	background: url(../img/icon-3X.png) left center no-repeat;
+.hereIs__block-creatred-maecenas
+	padding-left: 130px
+	padding-left: 130px;
+	background: url(../img/icon-4X.png) left center no-repeat;
+
+// hereIs-block__right
+.hereIs-block__right
+	float: right
+	width: 45%
+	overflow: hidden
+	&--code
+		font-family: ﻿$montserrat-bold 
+		font-size: 45px
+		color: rgba(141, 129, 172, 255)
+		font-weight: 600
+	&--img
+		padding: 85px 0px 77px 75px;
+		background: url(../img/BG-2.png) no-repeat
+
+@media (max-width: 900px) 
+	.hereIs-block__right
+		display: none
+@media (max-width: 1000px) 
+	.hereIs-block__right--code
+		font-size: 30px
+
+// steven-section 
+.steven-section 
+	width: 100%
+.steven-section__wrapper
+	display: flex
+	flex-direction: column
+	align-items: center
+	&--block
+		margin: 100px 10px 50px
+		background: url(../img/usirpic.png) no-repeat
+	&--row
+		display: flex;
+		justify-content: space-between;
+
+@media (max-width: 900px) 
+	.steven-section__wrapper--row
+		max-width: 500px
+@media (max-width: 550px) 
+	.steven-section__wrapper--row
+		max-width: 300px	
+@media (max-width: 320px) 
+	.steven-section__wrapper--row
+		max-width: 200px
+
+// people-section
+.people-section
+	background-image: url(../img/BG-3.png)
+	&__wrapper--title
+		font-family: ﻿$montserrat-bold
+		font-size: 48px
+		color: rgba(255, 255, 255, 255)
+		text-align: center
+		font-weight: bold
+		padding: 100px 0px
+	&__wrapper--block 
+		display: flex
+		flex-wrap: wrap
+		align-items: flex-end
+		justify-content: center
+		padding-bottom: 60px
+
+@media (max-width: 480px) 
+	.people-section__wrapper--title
+		font-size: 28px
+		padding: 50px 0px
+@media (max-width: 768px) 
+	.people-section__wrapper--block
+		flex-direction: column
+		margin: 0px 25px
+
+.fork-block
+	font-family: ﻿$montserrat-bold
+	font-size: 19px
+	color: rgba(255, 255, 255, 255)
+	text-align: center
+	width: 33%
+	&__img 
+		margin-bottom: 19px
+@media (max-width: 768px) 
+	.fork-block
+		width: 100%
+.line 
+	margin-top: 80px
+	height: 20px
+	width: 100%
+	background: url(../img/line.png) center no-repeat
+
+// fork-subscription-section
+.fork-subscription-section
+	background: url(../img/BG-3.png) 
+.fork-subscription__background
+	background-color: rgba(75,59,78, 0.7)
+.fork-subscription__wrapper
+	@extend %main-wrapper
+	&--all-block 
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		padding: 40px 0px 30px
+
+@media (max-width: 768px) 
+	.fork-subscription__wrapper--title
+		font-size: 30px
+		padding: 50px 40px 0px
+
+.price-block
+	text-transform: uppercase
+	flex: 0 0 23%
+	margin: 50px 5px 50px
+	box-sizing:border-box
+	font-family: ﻿$montserrat-regular
+	&:first-child
+		margin-left: 0;
+	&:last-child
+		margin-right: 0;
+	&:hover
+		margin: 80px 15px
+		font-size: 40px;
+		background-color: rgba( 57,34,44, 0.7)	
+
+@media (max-width: 1000px) 
+	.price-block 
+		flex: 0 0 20%	
+@media (max-width: 1000px) 
+	.price-block 
+		flex: 0 0 26%
+// @media (max-width: 500px) 
+// 	.price-block :hover
+// 		margin: none
+// 		font-size: 30px;
+// 		background-color: none	
+
+@media (max-width: 480px) 
+	.price-block 
+		flex: 0 0 70%
+
+.price-block__title
+	padding: 30px
+	background-color: rgba(255, 255, 224, 0.3)
+	font-size: 20px
+	color: rgba(255, 255, 255, 255)
+	text-align: center		
+.price-block__body
+	background-color: rgba(255, 255, 224, 0.2)
+	&--price 
+		font-size: 30px
+		color: rgba(255, 255, 255, 255)
+		text-align: center
+		padding: 30px 75px
+		font-weight: bold
+	&--month
+		font-size: 10px
+		color: rgba(255, 255, 255, 255)
+		text-align: center
+		background: url(../img/line-price.png) bottom no-repeat;
+		padding-bottom: 35px
+	&--license
+		width: 90%
+		padding: 20px 10px 40px
+		font-size: 15px
+		color: rgba(255, 255, 255, 255)
+		text-align: center
+
+// subscribe-section
+.subscribe-section
+	background-color: #f4f4f4
+	&_wrapper
+		@extend %main-wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+@media (max-width: 768px) 
+	.subscribe-section_wrapper
+		flex-direction: column
+		align-items: center
+
+.subscribe-section__email
+	border-radius: 20px
+	border: none
+	padding: 10px 20px
+@media (max-width: 480px) 
+	.subscribe-section__email
+		padding: 10px 5px
+
+.blog-section__wrapper
+	@extend %main-wrapper
+	&--all-block
+		display: flex
+		justify-content: center
+		align-items: flex-start
+		margin-bottom: 50px
+
+@media (max-width: 768px) 
+	.blog-section__wrapper--all-block
+		margin-bottom: 0px		
+@media (max-width: 480px) 
+	.blog-section__wrapper--all-block
+		flex-direction: column
+
+.blog-section__block
+	max-width: 330px
+	margin: 50px 35px
+@media (max-width: 768px) 
+	.blog-section__block 
+		max-width: 200px
+		margin: 10px
+@media (max-width: 480px) 
+	.blog-section__block 
+		max-width: 350px
+
+// footer
+.footer__wrapper
+	@extend %main-wrapper
+	&--all-block
+		display: flex
+		align-items: center
+		justify-content: center
+		font-family: ﻿$montserrat-regular
+		font-size: 17px
+		color: rgba(132, 142, 151, 255)
+		text-align: left
+
+@media (max-width: 768px) 
+	.footer__wrapper--all-block
+		align-items: baseline
+@media (max-width: 480px) 
+	.footer__wrapper--all-block
+		flex-direction: column
+		justify-content: center
+	
+.footer-block
+	max-width: 250px
+	padding: 30px
+	&__list
+		list-style-type: none
+		&--anchor
+			color: rgba(132, 142, 151, 255)
+			text-decoration: none
+			&:hover 
+				color: rgb(220, 20, 60)
+
+@media (max-width: 768px) 
+	.footer-block 
+		padding: 10px
+		max-width: 150px	
+@media (max-width: 480px) 
+	.footer-block 
+		padding: 10px
+		max-width: 350px
+
+
