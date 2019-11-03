@@ -15,50 +15,60 @@
 
 	</head>
 	<body>
-		<header>
-			<div class="wrapper">
-				<div class="header__wrapper">
+		<header class="header">
+			<div class="header__wrapper">
 
-					<div class="logo">
-						<img class="logo__img--pencil" src="../img/logo.png"> 
-						<img src="../img/logo-forkio.png">
-					</div>
-					
-					<div class="header__nav">
-						<label class="burger__label" for="burger--label">
-							<img src="../img/sandwich.png">
-						</label>
-						<input  class="burger" type="checkbox" name="burger" id="burger-label" hidden>
-						<ul class="menu">
-							<li class="menu__list">
-								<a class="menu__a" href="#">
-									Overview
-								</a>
-							</li>
-							<li class="menu__list">
-								<a class="menu__a" href="#">
-									About Fork
-								</a>
-							</li>
-							<li class="menu__list">
-								<a class="menu__a" href="#">
-									Buying Options
-								</a>
-							</li>
-							<li class="menu__list">
-								<a class="menu__a" href="#">
-									Support
-								</a>
-							</li>
-						</ul>
-					</div>
-
-					<button class="main__button">
-						Buy Now
-					</button>
+				<div class="logo">
+					<img class="logo__img--pencil" src="../img/logo.png"> 
+					<img src="../img/logo-forkio.png">
 				</div>
-			</div> <!-- //wrapper -->
-			<div class="clear"></div>
+					
+				<div class="header__nav">
+
+					<ul class="menu">
+						<li class="menu__list">
+							<a class="menu__a" href="#">
+								Overview
+							</a>
+						</li>
+						<li class="menu__list">
+							<a class="menu__a" href="#">
+								About Fork
+							</a>
+						</li>
+						<li class="menu__list">
+							<a class="menu__a" href="#">
+								Buying Options
+							</a>
+						</li>
+						<li class="menu__list">
+							<a class="menu__a" href="#">
+								Support
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<button class="main__button">
+					Buy Now
+				</button>
+
+				<!-- burger -->
+				<div class="lala">
+					<label class="burger__label" for="burger-label">
+						<img src="../img/sandwich.png">
+					</label>                
+					<input class="burger" type="checkbox" name="burger" id="burger-label" >
+					<ul class="burger_menu">
+						<li><a class="burger_menu--item" href="#">Home</a></li>
+						<li><a class="burger_menu--item" href="#">Projects</a></li>
+						<li><a class="burger_menu--item" href="#">Team</a></li>
+						<li><a class="burger_menu--item" href="#">The blog</a></li>
+						<li><a class="burger_menu--item" href="#">Contacts</a></li>
+					</ul>
+				</div>
+			</div>  <!-- //header__wrapper -->
+		<div class="clear"></div>
 	</header>
 
 		<main>
@@ -72,9 +82,9 @@
 						<h3 class="forkApp-section__wrapper--subtitle">
 							A real gamechanger in the world of web development
 						</h3>
-						<span class="forkApp-section__wrapper--subject">
+						<p class="forkApp-section__wrapper--subject">
 							v. 2.8 For Mac and Windows
-						</span>
+						</p>
 					</div>
 
 					<div class="button-download">
@@ -157,9 +167,9 @@
 							<h3 class="steven__block--title"><!-- в отдельный -->
 								Steven Strange
 							</h3>
-							<span class="steven__block--span">
+							<p class="steven__block--paragraph">
 								@DoctorS
-							</span>
+							</p>
 						</div>
 
 						<div class="steven-section__wrapper--row">
