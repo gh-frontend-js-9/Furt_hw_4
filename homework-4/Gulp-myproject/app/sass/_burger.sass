@@ -1,0 +1,35 @@
+.lala
+	position: absolute
+	top: 40px
+	right: 20px
+.burger 
+	display: none
+	&__label 
+		visibility: hidden 
+
+@media (max-width: 800px) 
+	.burger:checked ~ .burger_menu
+		visibility: visible
+	.burger__label 
+		visibility: visible
+		display: block
+
+.burger_menu
+	flex-direction: column
+	display: block
+	visibility: hidden
+	max-width: 150px
+	max-height: 280px
+	padding: 20px 0
+	list-style: none
+	background-color:#ffffff
+	&--item
+		display: block
+		padding: 13px 24px
+		color: #194277
+		font-size: 23px
+		font-weight: 600
+		text-decoration: none
+		&:hover 
+			background-color: #CFD8DC
+
