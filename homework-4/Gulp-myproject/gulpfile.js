@@ -1,24 +1,53 @@
 var gulp = require("gulp"),
-    sass = require("gulp-sass");
-    watch = require('gulp-watch');
-    // browserSync = require("browser-sync").create();
+    sass = require("gulp-sass"),
+    watch = require('gulp-watch'),
+    browserSync = require("browser-sync").create();
 
-gulp.task('watch',function(){
-    gulp.watch('app/sass/**/*.sass', gulp.series('sass'));
-});
-
-
-gulp.task('sass', function(){
-    return gulp.src('app/sass/**/*.sass') //вернуть функцию-источник
+function sasss() {
+    return gulp.src('./app/**/*.sass') //вернуть функцию-источник
         .pipe(sass())  //преобразование  
-        .pipe(gulp.dest('app/css'))   //выведение в папку
-        // .pipe(browserSync.reload({strem:true}))
-});
+        .pipe(gulp.dest('./app/css'))   //выведение в папку
+        .pipe(browserSync.reload({stream:true}))
+};
+
+function watchFiles() {
+    browserSync.init({
+        server: {
+            baseDir: './app',
+            index: '/html/hw-4.html'
+        }
+    })
+
+    gulp.watch('./app/**/*.sass', {}, sasss);
+    gulp.watch('./app/html/**/*.html').on('change', browserSync.reload);
+}
+
+exports.watch = watchFiles;
+
+
+
+
+
+
+
+// gulp.task('watch',function(){
+//  gulp.watch('app/sass/**/*.sass', gulp.series('sass'));
+//  gulp.watch('app/sass/**/*.sass', gulp.series('scss'));
+//  gulp.watch('app/html/**/*.sass', gulp.series('html'));
+// });
+
+
+// gulp.task('sass', function(){
+//  return gulp.src('app/sass/**/*.sass') //вернуть функцию-источник
+//      .pipe(sass())  //преобразование  
+//      .pipe(gulp.dest('app/css'))   //выведение в папку
+//      // .pipe(browserSync.reload({strem:true}))
+// });
 
 // gulp.task('browserSync', function() {
 //   browserSync({
-//     server: {
-//       baseDir: 'app'
+//     server: { 
+//       baseDir: 'app/'
 //     },
 //     notify:false
 //   });
@@ -46,7 +75,7 @@ gulp.task('sass', function(){
 //          baseDir: "app"
 //      }     
 //  });
-//  gulp.watch("app/*.sass", style);
+//  gulp.watch("app/*.sass", style); 
 // }
 
 // function reload() {
@@ -62,3 +91,4 @@ gulp.task('sass', function(){
 //     gulp.watch(app);
 //     gulp.watch("app/sass/**/*.sass", reload);
 // }
+
